@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Collaboration App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="https://unpkg.com" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- 1. ऑथेंटिकेशन/लॉगिन स्क्रीन -->
+    <div id="auth-box">
+        <h2>Secure Login / Join Room</h2>
+        <input type="text" id="username" placeholder="Enter Your Name" required><br>
+        <input type="text" id="room-id" placeholder="Enter Room ID (e.g., room1)" required><br>
+        <button onclick="startApp()">Join Securely</button>
+    </div>
+
+    <!-- 2. मुख्य डैशबोर्ड (लॉगिन के बाद दिखेगा) -->
+    <div id="app-container" style="display:none;">
+        <div class="video-section">
+            <h3>📹 Live Video Encryption Enabled (SRTP)</h3>
+            <div id="video-grid"></div>
+            <div class="controls">
+                <button id="screen-share-btn">🖥️ Share Screen</button>
+                <input type="file" id="file-input">
+            </div>
+        </div>
+
+        <div class="whiteboard-section">
+            <h3>🎨 Collaborative Whiteboard</h3>
+            <canvas id="whiteboard"></canvas>
+            <div id="file-list"><h4>📁 Shared Files:</h4></div>
+        </div>
+    </div>
+</body>
+</html>
