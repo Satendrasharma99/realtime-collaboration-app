@@ -1,0 +1,11 @@
+body { font-family: Arial, sans-serif; background: #f0f2f5; margin: 0; padding: 20px; }
+#auth-box { width: 300px; margin: 100px auto; padding: 20px; background: white; border-radius: 8px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+#auth-box input { width: 90%; padding: 8px; margin: 10px 0; }
+#app-container { display: flex; gap: 20px; justify-content: space-around; }
+.video-section, .whiteboard-section { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 45%; }
+#video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-bottom: 15px; }
+video { width: 100%; background: #222; border-radius: 8px; transform: scaleX(-1); }
+canvas { border: 2px solid #ccc; background: #fafafa; cursor: crosshair; }
+.controls { margin-top: 10px; display: flex; gap: 10px; }
+#file-list { margin-top: 15px; background: #eee; padding: 10px; border-radius: 5px; }
+
